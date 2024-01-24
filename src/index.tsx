@@ -5,27 +5,37 @@ import reportWebVitals from './reportWebVitals';
 import './tailwind.css';
 import './custom.css';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import PlantSearch from "./components/PlantSearch";
-import Navbar from "./components/Navbar";
+import PlantSearch from "./Components/PlantSearch";
+import Layout from "./Components/Layout/Layout";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 
+
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App/>
-    },
-    {
-        path: "/search",
-        element: <PlantSearch/>
+        element: <Layout/>,
+        children: [
+            {
+                path: "/",
+                element: <App/>
+            },
+            {
+                path: "/home",
+                element: <App/>
+            },
+            {
+                path: "/search",
+                element: <PlantSearch/>
+            }
+        ]
     }
 ])
 
 root.render(
     <React.StrictMode>
-        <Navbar/>
         <RouterProvider router={router}/>
     </React.StrictMode>
 );
