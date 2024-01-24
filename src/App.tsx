@@ -12,21 +12,21 @@ function App() {
                          className="h-[27vw] w-auto border-0 rounded-2xl absolute top-[4vh] left-[6vh]"/>
                 </div>
                 <div>
-                <div className="grid grid-cols-2">
+                <div className="grid grid-cols-2 ">
                     <div>
-                        <img className="h-[5vh]" src="/magnifyingGlass.png"/>
+                        <img className="h-[5vh] mt-2" src="/magnifyingGlass.png"/>
                     </div>
                     <div>
                         <p className="font-logo text-[5vh]">Find</p>
                     </div>
                     <div>
-                        <img className="h-[5vh]" src="/plus.png"/>
+                        <img className="h-[5vh] mt-2" src="/plus.png"/>
                     </div>
                     <div>
                         <p className="font-logo text-[5vh]">Add</p>
                     </div>
                     <div>
-                        <img className="h-[5vh]" src="/heart.png"/>
+                        <img className="h-[5vh] mt-2" src="/heart.png"/>
                     </div>
                     <div>
                         <p className="font-logo text-[5vh]">Take care</p>
