@@ -1,6 +1,13 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 export default function Home() {
+    const navigate = useNavigate();
+    function handleGetStarted() {
+        navigate("/search");
+    }
+
+
     return (
         <div className="h-[90vh] flex items-center justify-evenly ">
             <div className=" w-[30vw] h-[27vw] border-[11px] rounded-2xl border-primary relative hidden md:block">
@@ -29,7 +36,8 @@ export default function Home() {
                     </div>
                 </div>
                 <button
-                    className="mt-[5vh] ml-[10vh] font-logo font-bold text-xl bg-primary py-4 px-5 rounded-xl text-offWhite">GET
+                    className="mt-[5vh] ml-[10vh] font-logo font-bold text-xl bg-primary py-4 px-5 rounded-xl text-offWhite"
+                    onClick={() => handleGetStarted()}>GET
                     STARTED
                 </button>
             </div>
