@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         logo: ['Knewave', 'sans-serif'],
+        regular: ['Libre Baskerville', 'sans-serif'],
       },
       colors:{
         primary: '#368966',
