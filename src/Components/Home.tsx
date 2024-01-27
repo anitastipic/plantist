@@ -9,7 +9,7 @@ export default function Home() {
 
 
     return (
-        <div className="h-[90vh] flex items-center justify-evenly ">
+        <div className="h-[85vh] flex items-center justify-evenly ">
             <div className=" w-[30vw] h-[27vw] border-[11px] rounded-2xl border-primary relative hidden md:block">
                 <img src="/plant.jpeg"
                      className="h-[27vw] w-auto border-0 rounded-2xl absolute top-[4vh] left-[6vh]"/>
