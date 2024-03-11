@@ -10,7 +10,6 @@ export default function PlantSearch() {
 
     const [searchInput, setSearchInput] = useState("");
     const [suggestions, setSuggestions] = useState<Plant[]>([]);
-    const [plantIsVisible, setPlantIsVisible] = useState(false);
 
     useEffect(() => {
         if (searchInput) {
@@ -30,7 +29,6 @@ export default function PlantSearch() {
 
     function handleSubmit(event: React.ChangeEvent<HTMLFormElement>) {
         event.preventDefault();
-        setPlantIsVisible(true);
     }
 
     return (
@@ -46,7 +44,7 @@ export default function PlantSearch() {
                     />
                 </form>
                 <div className="bg-offWhite grid grid-cols-3 gap-x-1 gap-y-5 w-screen mx-[2.5vw] mt-[2vh]">
-                    {plantIsVisible && suggestions.map(plant =>
+                    {suggestions.map(plant =>
                         <div
                             className="hover:border-primary justify-center  w-[45vh] h-[70vh] bg-white border rounded-2xl">
                             <img className="w-[45vh] h-auto rounded-t-2xl"
